@@ -1,29 +1,24 @@
 # GitHub API Python Script
 
-A Python script for interacting with the GitHub API using the PyGithub library.
+A simple Python script that gets information from GitHub repositories using the GitHub API.
+
+## What it does
+
+- Shows how many stars a repository has
+- Shows how many open issues a repository has
+- Lists all open issues with their numbers and titles
 
 ## Setup
 
-1. Install the required dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-2. Get a GitHub Personal Access Token:
+1. Install Poetry (if you don't have it):
+  
+   pip install poetry
+   2. Install the project dependencies:
+   poetry install
+   3. Get a GitHub Personal Access Token:
    - Go to https://github.com/settings/tokens
-   - Generate a new token with appropriate permissions (at least `public_repo` scope)
+   - Click "Generate new token (classic)"
+   - Give it a name and select the `public_repo` scope
+   - Click "Generate token" and copy it
 
-3. Set the token as an environment variable in .env file like:
-GITHUB_TOKEN =
-
-Or pass it directly when initializing:
-```python
-auth = Auth.Token("xxx")
-```
-
-## Usage
-
-Run the script:
-```bash
-python github_api.py
-```
+4. Create a `.env` file in the project root:
